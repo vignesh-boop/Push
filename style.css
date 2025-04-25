@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-color:black;
+}
+/* for nav bar */
+.container{
+    display: flex;
+    height: 100vh;
+}
+.sidebar{
+    width: 100px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.sidebar ul{
+    list-style: none;
+    width: 100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.material-symbol-outline{
+    color: #fff;
+    font-size: 30px !important;
+}
+    .sidebar li{
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+    .sidebar li:hover{
+transform:scale(1.2);
+}
+.content-wraper{
+    flex: 1;
+    margin-left: 100px;
+}
+.banner{
+    background: url(Assets/svg/moneyHeist.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 20px;
+    padding: 0px 20px 5px;
+}
+.flex-group{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+.spacing-left{
+    margin-left: 15px;
+}
+.rating-label{
+    color: black;
+    background-color: yellow;
+    padding: 0px 2px;
+}
+.text-white{
+    color: white;
+}
+.text-bold{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.stream-count{
+    color: orange;
+}
+.action-button{
+    display: flex;
+    gap: 20px;
+}
+.btn{
+        border-radius: 30px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+.btn-play{
+    background-color: red;
+    padding: 12px 50px;
+    color: white;
+}
+.btn:hover{
+    background-color:#a00000;
+}
+.btn-trailer{
+    background-color: white;
+    padding: 12px 15px;
+    color: #000;
+}
+.movie-section{
+    display: flex;
+    flex-direction:column;
+    gap:10px;
+    padding: 10px 20px;
+}
+.movie-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+.movie{
+    width: 145px;
+    aspect-ratio: 2/3;
+    border-radius: 20px;
+}
+
+/* Responsive design */
+
+@media(max-width : 768px){
+    .sidebar{
+        padding-top: 25px;
+        width: 45px;
+    }
+    .sidebar ul{
+        align-items: center;
+        justify-content: stretch;
+    }
+    .banner{
+        display: none;
+    }
+    .movie-container{
+        width: 100%;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .content-wraper{
+        width: 100%;
+        margin-left: 45px;
+    }
+    .text-white{
+        font-size: small;
+    }
+}
